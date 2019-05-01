@@ -8,10 +8,14 @@ class Customer
   end
 
   def to_view
-    puts "#{id} - Name: #{name} | Address: #{address}"
+    "#{id} - Name: #{name} | Address: #{address}"
   end
 
   def to_csv_row
     [id, name, address]
+  end
+
+  def headers
+    %w[id name address]
   end
 end

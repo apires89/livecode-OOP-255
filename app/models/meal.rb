@@ -8,10 +8,14 @@ class Meal
   end
 
   def to_view
-    puts "#{id} - Name: #{name} | Price: €#{price}"
+    "#{id} - Name: #{name} | Price: €#{price}"
   end
 
   def to_csv_row
     [id, name, price]
+  end
+
+  def headers
+    %w[id name price]
   end
 end
